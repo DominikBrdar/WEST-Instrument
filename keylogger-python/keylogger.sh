@@ -6,11 +6,10 @@
 pip install pyserial
 pip install pynput
 
-
+# xvfb server
 xhost +
+
 # run python script
-sudo python3 ./keylogger.py 
-
-
+sudo python3 ./keylogger.py
 
 
