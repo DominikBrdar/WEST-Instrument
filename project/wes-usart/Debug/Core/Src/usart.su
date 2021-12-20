@@ -1,0 +1,6 @@
+usart.c:31:6:MX_USART2_UART_Init	8	static
+usart.c:59:6:HAL_UART_MspInit	48	static
+usart.c:94:6:HAL_UART_MspDeInit	16	static
+usart.c:121:6:USER_UART_IRQHandler	16	static
+usart.c:138:6:USART2_SendChar	16	static
+usart.c:143:5:USART2_Dequeue	24	static
