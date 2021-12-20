@@ -1,0 +1,2 @@
+audio.c:3:6:init_AudioReset	8	static
+audio.c:7:6:configAudio	24	static
