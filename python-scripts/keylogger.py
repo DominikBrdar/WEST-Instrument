@@ -27,7 +27,7 @@ if __name__ == "__main__":
     print("Odaberi usb port:")
     allPorts = comports()
     for i in range (len(allPorts)):
-    	print(str(i) + " " + allPorts[i].device)
+        print(str(i) + " " + allPorts[i].device)
     portPath = int(input())
     ser = serial.Serial(allPorts[portPath].device)
     with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
