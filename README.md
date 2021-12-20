@@ -3,7 +3,7 @@ Embedded system for playing remote simulated instrument (over WiFi network) deve
 
 Hardware:  STM32F407VG Discovery kit, USART cp2102
 
-Software:  STM32CubeMX, STM32CubeIDEž
+Software:  STM32CubeMX, STM32CubeIDE
 # 
 
 #   /project
