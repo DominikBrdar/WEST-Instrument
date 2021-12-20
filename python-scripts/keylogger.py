@@ -1,5 +1,6 @@
 from pynput import keyboard
 import serial
+from serial.tools.list_ports import comports
 
 pressed = []
 
@@ -23,14 +24,14 @@ def on_release(key):
             return False
 
 if __name__ == "__main__":
-
-	print("Unesi usb port:")
-	portPath = input()
-	ser = serial.Serial(portPath)
-	
-    with keyboard.Listener(
-        on_press=on_press,
-        on_release=on_release) as listener:
-            listener.join()
+    print("Odaberi usb port:")
+    allPorts = comports()
+    for i in range (len(allPorts)):
+    	print(str(i) + " " + allPorts[i].device)
+    portPath = int(input())
+    ser = serial.Serial(allPorts[portPath].device)
+    with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+        listener.join()
+    print("connected to " + allPorts[i].device)
     while(True):
         r = 1
