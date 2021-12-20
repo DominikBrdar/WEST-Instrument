@@ -2,8 +2,6 @@ from pynput import keyboard
 import serial
 
 pressed = []
-portPath = '/dev/ttyUSB0'
-ser = serial.Serial(portPath)
 
 def on_press(key):
     global pressed
@@ -25,6 +23,11 @@ def on_release(key):
             return False
 
 if __name__ == "__main__":
+
+	print("Unesi usb port:")
+	portPath = input()
+	ser = serial.Serial(portPath)
+	
     with keyboard.Listener(
         on_press=on_press,
         on_release=on_release) as listener:
